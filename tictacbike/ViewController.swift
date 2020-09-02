@@ -10,22 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let boardImageView = UIImageView()
-    let buttons = [UIButton]()
     var activePlayer = 1
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //setupBoardImageView()
-    }
-    
-    func setupBoardImageView() {
-        self.view.addSubview(boardImageView)
-        self.boardImageView.frame = CGRect(x: 289, y: 59, width: 616, height: 666)
-        let boardImage = UIImage(named: "board.png")
-        self.boardImageView.image = boardImage
     }
     
     @IBAction func pressSpace(_ sender: UIButton) {

@@ -75,20 +75,20 @@
                                     <action selector="pressSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5c-VB-fpU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vel-z0-ppy">
-                                <rect key="frame" x="721" y="541" width="168" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clica em mim pfvr"/>
-                                <connections>
-                                    <action selector="pressSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahE-Cf-lkZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeN-ix-yvS">
                                 <rect key="frame" x="305" y="541" width="168" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clica em mim pfvr"/>
                                 <connections>
                                     <action selector="pressSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iIq-nH-zWn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vel-z0-ppy">
+                                <rect key="frame" x="721" y="541" width="168" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clica em mim pfvr"/>
+                                <connections>
+                                    <action selector="pressSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahE-Cf-lkZ"/>
                                 </connections>
                             </button>
                         </subviews>
