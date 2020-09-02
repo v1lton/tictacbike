@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89CC47072500322400720D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47062500322400720D0E /* AppDelegate.swift */; };
+		89CC47092500322400720D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47082500322400720D0E /* SceneDelegate.swift */; };
+		89CC470B2500322400720D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC470A2500322400720D0E /* ViewController.swift */; };
+		89CC470E2500322400720D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CC470C2500322400720D0E /* Main.storyboard */; };
+		89CC47102500322600720D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CC470F2500322600720D0E /* Assets.xcassets */; };
+		89CC47132500322600720D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CC47112500322600720D0E /* LaunchScreen.storyboard */; };
+		89CC471B2500331900720D0E /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471A2500331900720D0E /* board.png */; };
+		89CC471D2500399700720D0E /* bike369.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471C2500399700720D0E /* bike369.jpg */; };
+		89CC471F250039A400720D0E /* bike194.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471E250039A400720D0E /* bike194.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89CC47032500322400720D0E /* tictacbike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictacbike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CC47062500322400720D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89CC47082500322400720D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		89CC470A2500322400720D0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89CC470D2500322400720D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89CC470F2500322600720D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89CC47122500322600720D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89CC47142500322600720D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CC471A2500331900720D0E /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		89CC471C2500399700720D0E /* bike369.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike369.jpg; sourceTree = "<group>"; };
+		89CC471E250039A400720D0E /* bike194.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike194.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89CC47002500322400720D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89CC46FA2500322400720D0E = {
+			isa = PBXGroup;
+			children = (
+				89CC47052500322400720D0E /* tictacbike */,
+				89CC47042500322400720D0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89CC47042500322400720D0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89CC47032500322400720D0E /* tictacbike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89CC47052500322400720D0E /* tictacbike */ = {
+			isa = PBXGroup;
+			children = (
+				89CC47062500322400720D0E /* AppDelegate.swift */,
+				89CC47082500322400720D0E /* SceneDelegate.swift */,
+				89CC470A2500322400720D0E /* ViewController.swift */,
+				89CC471A2500331900720D0E /* board.png */,
+				89CC471C2500399700720D0E /* bike369.jpg */,
+				89CC471E250039A400720D0E /* bike194.jpg */,
+				89CC470C2500322400720D0E /* Main.storyboard */,
+				89CC470F2500322600720D0E /* Assets.xcassets */,
+				89CC47112500322600720D0E /* LaunchScreen.storyboard */,
+				89CC47142500322600720D0E /* Info.plist */,
+			);
+			path = tictacbike;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89CC47022500322400720D0E /* tictacbike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CC47172500322600720D0E /* Build configuration list for PBXNativeTarget "tictacbike" */;
+			buildPhases = (
+				89CC46FF2500322400720D0E /* Sources */,
+				89CC47002500322400720D0E /* Frameworks */,
+				89CC47012500322400720D0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tictacbike;
+			productName = tictacbike;
+			productReference = 89CC47032500322400720D0E /* tictacbike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89CC46FB2500322400720D0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Wilton Ramos";
+				TargetAttributes = {
+					89CC47022500322400720D0E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 89CC46FE2500322400720D0E /* Build configuration list for PBXProject "tictacbike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89CC46FA2500322400720D0E;
+			productRefGroup = 89CC47042500322400720D0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89CC47022500322400720D0E /* tictacbike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89CC47012500322400720D0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CC471B2500331900720D0E /* board.png in Resources */,
+				89CC47132500322600720D0E /* LaunchScreen.storyboard in Resources */,
+				89CC471D2500399700720D0E /* bike369.jpg in Resources */,
+				89CC47102500322600720D0E /* Assets.xcassets in Resources */,
+				89CC470E2500322400720D0E /* Main.storyboard in Resources */,
+				89CC471F250039A400720D0E /* bike194.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89CC46FF2500322400720D0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CC470B2500322400720D0E /* ViewController.swift in Sources */,
+				89CC47072500322400720D0E /* AppDelegate.swift in Sources */,
+				89CC47092500322400720D0E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89CC470C2500322400720D0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CC470D2500322400720D0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89CC47112500322600720D0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CC47122500322600720D0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89CC47152500322600720D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89CC47162500322600720D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89CC47182500322600720D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D84M4LK87S;
+				INFOPLIST_FILE = tictacbike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wilton.tictacbike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89CC47192500322600720D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D84M4LK87S;
+				INFOPLIST_FILE = tictacbike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wilton.tictacbike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89CC46FE2500322400720D0E /* Build configuration list for PBXProject "tictacbike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CC47152500322600720D0E /* Debug */,
+				89CC47162500322600720D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89CC47172500322600720D0E /* Build configuration list for PBXNativeTarget "tictacbike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CC47182500322600720D0E /* Debug */,
+				89CC47192500322600720D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89CC46FB2500322400720D0E /* Project object */;
+}
