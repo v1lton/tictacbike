@@ -9,6 +9,7 @@
 import UIKit
 import Vision
 import VideoToolbox
+import NaturalLanguage
 
 class ViewController: UIViewController {
     
@@ -96,6 +97,10 @@ class ViewController: UIViewController {
         print("To aqui")
         print(imagesAndDescriptions[0].1)
         print(imagesAndDescriptions[1].1)
+        print("Analisando descricao 1:")
+        detectSentimentWithModel(imagesAndDescriptions[0].1)
+        print("Analisando descricao 2:")
+        detectSentimentWithModel(imagesAndDescriptions[1].1)
     }
     
     func getImage(url: URLAndDescription) {
@@ -141,7 +146,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func pressSpace(_ sender: UIButton) {
         if (gameState[sender.tag] == 0 && gameIsActive == true) {
@@ -209,7 +213,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func playAgain(_ sender: Any) {
         
         playAgainbutton.isHidden = true
@@ -229,6 +232,21 @@ class ViewController: UIViewController {
         b8.setImage(nil, for: .normal)
         b9.setImage(nil, for: .normal)
     }
+    
+    private func detectSentimentWithModel(_ message: String) {
+            do {
+                let sentimentDetector = try NLModel(mlModel: AnRandomSentimentClassifier().model)
+                guard let prediction = sentimentDetector.predictedLabel(for: message) else {
+                    print("Failed to predict result")
+                    return
+                }
+                
+                print("Our status: \(prediction)")
+            } catch {
+                fatalError("Failed to load Natural Language Model: \(error)")
+            }
+        }
+
     
     
     //        func fetchAnyPossibleIndexForMove() -> Int {
