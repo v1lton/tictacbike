@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     var gameIsActive = true
     
+    @IBOutlet weak var sentimentAnalysisButton: UIButton!
+    @IBOutlet weak var bikeDetectionButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var playAgainbutton: UIButton!
     
@@ -51,6 +53,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         label.isHidden = true
         playAgainbutton.isHidden = true
+        sentimentAnalysisButton.isHidden = true
+        bikeDetectionButton.isHidden = true
         
         // Do any additional setup after loading the view.
         collectURLs()
@@ -177,6 +181,8 @@ class ViewController: UIViewController {
                     label.text = "Chis has won!"
                     playAgainbutton.isHidden = false
                     label.isHidden = false
+                    sentimentAnalysisButton.isHidden = false
+                    bikeDetectionButton.isHidden = false
                       print("entrou 2")
                 }
                 else{
@@ -185,6 +191,8 @@ class ViewController: UIViewController {
                     label.text = "Bola has won!"
                     playAgainbutton.isHidden = false
                     label.isHidden = false
+                    sentimentAnalysisButton.isHidden = false
+                    bikeDetectionButton.isHidden = false
                       print("entrou 3")
                     
                 }
@@ -220,6 +228,8 @@ class ViewController: UIViewController {
         activePlayer = 1
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
+        sentimentAnalysisButton.isHidden = true
+        bikeDetectionButton.isHidden = true
         
         
         b1.setImage(nil, for: .normal)
