@@ -20,8 +20,6 @@
 		89CC47102500322600720D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CC470F2500322600720D0E /* Assets.xcassets */; };
 		89CC47132500322600720D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CC47112500322600720D0E /* LaunchScreen.storyboard */; };
 		89CC471B2500331900720D0E /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471A2500331900720D0E /* board.png */; };
-		89CC471D2500399700720D0E /* bike369.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471C2500399700720D0E /* bike369.jpg */; };
-		89CC471F250039A400720D0E /* bike194.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89CC471E250039A400720D0E /* bike194.jpg */; };
 		89D5695A25015D0F006A2C66 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 89D5695925015D0F006A2C66 /* MobileNetV2.mlmodel */; };
 		89D5695C25015D19006A2C66 /* Bikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D5695B25015D19006A2C66 /* Bikes.swift */; };
 /* End PBXBuildFile section */
@@ -42,8 +40,6 @@
 		89CC47122500322600720D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89CC47142500322600720D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89CC471A2500331900720D0E /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
-		89CC471C2500399700720D0E /* bike369.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike369.jpg; sourceTree = "<group>"; };
-		89CC471E250039A400720D0E /* bike194.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike194.jpg; sourceTree = "<group>"; };
 		89D5695925015D0F006A2C66 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		89D5695B25015D19006A2C66 /* Bikes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bikes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +89,6 @@
 				17DA461425028FE6009113B2 /* SpinnerViewController.swift */,
 				89D5695B25015D19006A2C66 /* Bikes.swift */,
 				89CC471A2500331900720D0E /* board.png */,
-				89CC471C2500399700720D0E /* bike369.jpg */,
-				89CC471E250039A400720D0E /* bike194.jpg */,
 				89CC470C2500322400720D0E /* Main.storyboard */,
 				89CC470F2500322600720D0E /* Assets.xcassets */,
 				89D5695925015D0F006A2C66 /* MobileNetV2.mlmodel */,
@@ -169,11 +163,9 @@
 				89CC471B2500331900720D0E /* board.png in Resources */,
 				89C3633625027F7400AAD259 /* Birds.wav in Resources */,
 				89CC47132500322600720D0E /* LaunchScreen.storyboard in Resources */,
-				89CC471D2500399700720D0E /* bike369.jpg in Resources */,
 				89CC47102500322600720D0E /* Assets.xcassets in Resources */,
 				89CC470E2500322400720D0E /* Main.storyboard in Resources */,
 				89C3633525027F7400AAD259 /* Thunderstorm.wav in Resources */,
-				89CC471F250039A400720D0E /* bike194.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

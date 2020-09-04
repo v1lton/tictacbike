@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -157,6 +157,7 @@
                         <outlet property="b8" destination="OeN-ix-yvS" id="4qc-bD-JM8"/>
                         <outlet property="b9" destination="vel-z0-ppy" id="jLi-Bl-LG1"/>
                         <outlet property="bikeDetectionButton" destination="OxW-tt-81x" id="dF9-Bo-EGZ"/>
+                        <outlet property="fundoArvore" destination="32Q-e5-2RH" id="dEg-ql-R8r"/>
                         <outlet property="label" destination="zXo-Sf-UJq" id="Hhs-gf-Cag"/>
                         <outlet property="playAgainbutton" destination="peb-9X-aQH" id="3OL-fi-9tZ"/>
                         <outlet property="sentimentAnalysisButton" destination="OqS-c1-bWx" id="DHI-i5-2cg"/>
