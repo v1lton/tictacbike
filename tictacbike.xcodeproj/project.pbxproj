@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17C0AFD225018D010086F24A /* AnRandomSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17C0AFD125018D010086F24A /* AnRandomSentimentClassifier.mlmodel */; };
 		17C0AFD425018DEB0086F24A /* SentimentAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0AFD325018DEB0086F24A /* SentimentAnalysisViewController.swift */; };
+		17DA461525028FE6009113B2 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA461425028FE6009113B2 /* SpinnerViewController.swift */; };
 		17DC59C12501CDA800BB328D /* BikeDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC59C02501CDA800BB328D /* BikeDetectionViewController.swift */; };
 		89CC47072500322400720D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47062500322400720D0E /* AppDelegate.swift */; };
 		89CC47092500322400720D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47082500322400720D0E /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		17C0AFD125018D010086F24A /* AnRandomSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnRandomSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		17C0AFD325018DEB0086F24A /* SentimentAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisViewController.swift; sourceTree = "<group>"; };
+		17DA461425028FE6009113B2 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		17DC59C02501CDA800BB328D /* BikeDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetectionViewController.swift; sourceTree = "<group>"; };
 		89CC47032500322400720D0E /* tictacbike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictacbike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CC47062500322400720D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				89CC47062500322400720D0E /* AppDelegate.swift */,
 				89CC47082500322400720D0E /* SceneDelegate.swift */,
 				89CC470A2500322400720D0E /* ViewController.swift */,
+				17DA461425028FE6009113B2 /* SpinnerViewController.swift */,
 				89D5695B25015D19006A2C66 /* Bikes.swift */,
 				89CC471A2500331900720D0E /* board.png */,
 				89CC471C2500399700720D0E /* bike369.jpg */,
@@ -172,6 +175,7 @@
 				89D5695C25015D19006A2C66 /* Bikes.swift in Sources */,
 				17DC59C12501CDA800BB328D /* BikeDetectionViewController.swift in Sources */,
 				17C0AFD225018D010086F24A /* AnRandomSentimentClassifier.mlmodel in Sources */,
+				17DA461525028FE6009113B2 /* SpinnerViewController.swift in Sources */,
 				17C0AFD425018DEB0086F24A /* SentimentAnalysisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

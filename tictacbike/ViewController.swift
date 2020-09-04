@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     typealias Prediction = (String, Double)
     typealias URLAndDescription = (URL, String)
     typealias imageAndDescription = (UIImage, String)
+    @IBOutlet weak var fundoArvore: UIImageView!
     
     //game variables
     var activePlayer = 1
@@ -55,9 +56,13 @@ class ViewController: UIViewController {
         playAgainbutton.isHidden = true
         sentimentAnalysisButton.isHidden = true
         bikeDetectionButton.isHidden = true
+        fundoArvore.isHidden = true
+        
         
         // Do any additional setup after loading the view.
+        createSpinnerView()
         collectURLs()
+      
     }
     
     func predictUsingVision(image: UIImage) -> Bool {
@@ -130,12 +135,14 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.getURLsAndIncidents(incidents: jsonData)
                     self.getTwoBikeImages()
+                    self.fundoArvore.isHidden = false
                 }
             } catch {
                 print ("JSON error: \(error.localizedDescription)")
             }
         }
         task.resume()
+       
     }
     
     func getURLsAndIncidents(incidents: Bikes) {
@@ -276,5 +283,24 @@ class ViewController: UIViewController {
     //            let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
     //            return emptySquares[Int(randomSquare)]
     //        }
+    
+    func createSpinnerView() {
+        let child = SpinnerViewController()
+
+        // add the spinner view controller
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
+        // wait two seconds to simulate some work happening
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            // then remove the spinner view controller
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+    }
+    
 }
 
