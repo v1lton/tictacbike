@@ -8,7 +8,7 @@
 
 import UIKit
 import Vision
-import VideoToolbox
+import AVFoundation
 import NaturalLanguage
 
 class ViewController: UIViewController {
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var activePlayer = 1
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     var gameIsActive = true
+    var audioPlayer: AVAudioPlayer?
     
     @IBOutlet weak var sentimentAnalysisButton: UIButton!
     @IBOutlet weak var bikeDetectionButton: UIButton!
@@ -99,12 +100,6 @@ class ViewController: UIViewController {
         playerOneImage = imagesAndDescriptions[0].0
         playerTwoImage = imagesAndDescriptions[1].0
         print("To aqui")
-        print(imagesAndDescriptions[0].1)
-        print(imagesAndDescriptions[1].1)
-        print("Analisando descricao 1:")
-        detectSentimentWithModel(imagesAndDescriptions[0].1)
-        print("Analisando descricao 2:")
-        detectSentimentWithModel(imagesAndDescriptions[1].1)
     }
     
     func getImage(url: URLAndDescription) {
@@ -179,29 +174,31 @@ class ViewController: UIViewController {
                     //cross has won
                     print("CROSS")
                     label.text = "Chis has won!"
+                    detectSentimentWithModel(imagesAndDescriptions[0].1)
                     playAgainbutton.isHidden = false
                     label.isHidden = false
                     sentimentAnalysisButton.isHidden = false
                     bikeDetectionButton.isHidden = false
-                      print("entrou 2")
+                    print("entrou 2")
                 }
                 else{
                     print("NOUGHT")
                     //nought has won
                     label.text = "Bola has won!"
+                    detectSentimentWithModel(imagesAndDescriptions[1].1)
                     playAgainbutton.isHidden = false
                     label.isHidden = false
                     sentimentAnalysisButton.isHidden = false
                     bikeDetectionButton.isHidden = false
-                      print("entrou 3")
+                    print("entrou 3")
                     
                 }
-                  print("entrou 4")
+                print("entrou 4")
                 
                 
             }
             
-              print("entrou 5")
+            print("entrou 5")
         }
         gameIsActive = false
         
@@ -244,37 +241,41 @@ class ViewController: UIViewController {
     }
     
     private func detectSentimentWithModel(_ message: String) {
-            do {
-                let sentimentDetector = try NLModel(mlModel: AnRandomSentimentClassifier().model)
-                guard let prediction = sentimentDetector.predictedLabel(for: message) else {
-                    print("Failed to predict result")
-                    return
-                }
-                
-                print("Our status: \(prediction)")
-            } catch {
-                fatalError("Failed to load Natural Language Model: \(error)")
+        do {
+            let sentimentDetector = try NLModel(mlModel: AnRandomSentimentClassifier().model)
+            guard let prediction = sentimentDetector.predictedLabel(for: message) else {
+                print("Failed to predict result")
+                return
             }
+            if prediction == "negative" {playNegativeSound()}
+            else {playPositiveSound()}
+        } catch {
+            fatalError("Failed to load Natural Language Model: \(error)")
         }
-
+    }
     
+    private func playNegativeSound() {
+        let pathToSound = Bundle.main.path(forResource: "Thunderstorm", ofType: "wav")!
+        let url = URL(fileURLWithPath: pathToSound)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("JSON error: \(error.localizedDescription)")
+        }
+    }
     
-    //        func fetchAnyPossibleIndexForMove() -> Int {
-    //            var emptySquares : [Int] = [Int]()
-    //            for i in 1...gameState.count {
-    //                if gameState[i-1] == 0 {
-    //                    emptySquares.append(i)
-    //                }
-    //            }
-    //            if emptySquares.isEmpty {
-    //                //print("Game has reached Error state ...!!")
-    //                return -1
-    //            }
-    //            //print("found empty squares...")
-    //            //print(emptySquares)
-    //            // return any random empty space
-    //            let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
-    //            return emptySquares[Int(randomSquare)]
-    //        }
+    private func playPositiveSound() {
+        let pathToSound = Bundle.main.path(forResource: "Birds", ofType: "wav")!
+        let url = URL(fileURLWithPath: pathToSound)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("JSON error: \(error.localizedDescription)")
+        }
+    }
 }
 

@@ -10,6 +10,8 @@
 		17C0AFD225018D010086F24A /* AnRandomSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17C0AFD125018D010086F24A /* AnRandomSentimentClassifier.mlmodel */; };
 		17C0AFD425018DEB0086F24A /* SentimentAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0AFD325018DEB0086F24A /* SentimentAnalysisViewController.swift */; };
 		17DC59C12501CDA800BB328D /* BikeDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC59C02501CDA800BB328D /* BikeDetectionViewController.swift */; };
+		89C3633525027F7400AAD259 /* Thunderstorm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89C3633325027F7400AAD259 /* Thunderstorm.wav */; };
+		89C3633625027F7400AAD259 /* Birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89C3633425027F7400AAD259 /* Birds.wav */; };
 		89CC47072500322400720D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47062500322400720D0E /* AppDelegate.swift */; };
 		89CC47092500322400720D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC47082500322400720D0E /* SceneDelegate.swift */; };
 		89CC470B2500322400720D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC470A2500322400720D0E /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		17C0AFD125018D010086F24A /* AnRandomSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnRandomSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		17C0AFD325018DEB0086F24A /* SentimentAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisViewController.swift; sourceTree = "<group>"; };
 		17DC59C02501CDA800BB328D /* BikeDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetectionViewController.swift; sourceTree = "<group>"; };
+		89C3633325027F7400AAD259 /* Thunderstorm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Thunderstorm.wav; sourceTree = "<group>"; };
+		89C3633425027F7400AAD259 /* Birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Birds.wav; sourceTree = "<group>"; };
 		89CC47032500322400720D0E /* tictacbike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictacbike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CC47062500322400720D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89CC47082500322400720D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89C3633225027F3A00AAD259 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				89C3633425027F7400AAD259 /* Birds.wav */,
+				89C3633325027F7400AAD259 /* Thunderstorm.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		89CC46FA2500322400720D0E = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 				89CC47142500322600720D0E /* Info.plist */,
 				17C0AFD325018DEB0086F24A /* SentimentAnalysisViewController.swift */,
 				17DC59C02501CDA800BB328D /* BikeDetectionViewController.swift */,
+				89C3633225027F3A00AAD259 /* Sounds */,
 			);
 			path = tictacbike;
 			sourceTree = "<group>";
@@ -150,10 +164,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				89CC471B2500331900720D0E /* board.png in Resources */,
+				89C3633625027F7400AAD259 /* Birds.wav in Resources */,
 				89CC47132500322600720D0E /* LaunchScreen.storyboard in Resources */,
 				89CC471D2500399700720D0E /* bike369.jpg in Resources */,
 				89CC47102500322600720D0E /* Assets.xcassets in Resources */,
 				89CC470E2500322400720D0E /* Main.storyboard in Resources */,
+				89C3633525027F7400AAD259 /* Thunderstorm.wav in Resources */,
 				89CC471F250039A400720D0E /* bike194.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
