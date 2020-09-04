@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     typealias Prediction = (String, Double)
     typealias URLAndDescription = (URL, String)
     typealias imageAndDescription = (UIImage, String)
+    @IBOutlet weak var fundoArvore: UIImageView!
     
     //game variables
     var activePlayer = 1
@@ -56,9 +57,13 @@ class ViewController: UIViewController {
         playAgainbutton.isHidden = true
         sentimentAnalysisButton.isHidden = true
         bikeDetectionButton.isHidden = true
+        fundoArvore.isHidden = true
+        
         
         // Do any additional setup after loading the view.
+        createSpinnerView()
         collectURLs()
+      
     }
     
     func predictUsingVision(image: UIImage) -> Bool {
@@ -125,12 +130,14 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.getURLsAndIncidents(incidents: jsonData)
                     self.getTwoBikeImages()
+                    self.fundoArvore.isHidden = false
                 }
             } catch {
                 print ("JSON error: \(error.localizedDescription)")
             }
         }
         task.resume()
+       
     }
     
     func getURLsAndIncidents(incidents: Bikes) {
@@ -275,5 +282,41 @@ class ViewController: UIViewController {
             print("JSON error: \(error.localizedDescription)")
         }
     }
+    //        func fetchAnyPossibleIndexForMove() -> Int {
+    //            var emptySquares : [Int] = [Int]()
+    //            for i in 1...gameState.count {
+    //                if gameState[i-1] == 0 {
+    //                    emptySquares.append(i)
+    //                }
+    //            }
+    //            if emptySquares.isEmpty {
+    //                //print("Game has reached Error state ...!!")
+    //                return -1
+    //            }
+    //            //print("found empty squares...")
+    //            //print(emptySquares)
+    //            // return any random empty space
+    //            let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
+    //            return emptySquares[Int(randomSquare)]
+    //        }
+    
+    func createSpinnerView() {
+        let child = SpinnerViewController()
+
+        // add the spinner view controller
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
+        // wait two seconds to simulate some work happening
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            // then remove the spinner view controller
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+    }
+    
 }
 
