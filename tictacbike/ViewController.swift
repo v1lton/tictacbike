@@ -183,7 +183,7 @@ class ViewController: UIViewController {
                     label.isHidden = false
                     sentimentAnalysisButton.isHidden = false
                     bikeDetectionButton.isHidden = false
-                      print("entrou 2")
+                    print("entrou 2")
                 }
                 else{
                     print("NOUGHT")
@@ -193,15 +193,15 @@ class ViewController: UIViewController {
                     label.isHidden = false
                     sentimentAnalysisButton.isHidden = false
                     bikeDetectionButton.isHidden = false
-                      print("entrou 3")
+                    print("entrou 3")
                     
                 }
-                  print("entrou 4")
+                print("entrou 4")
                 
                 
             }
             
-              print("entrou 5")
+            print("entrou 5")
         }
         gameIsActive = false
         
@@ -218,6 +218,8 @@ class ViewController: UIViewController {
             label.isHidden = false
             playAgainbutton.isHidden = false
         }
+        
+        self.fetchAnyPossibleIndexForMove()
         
     }
     
@@ -244,37 +246,137 @@ class ViewController: UIViewController {
     }
     
     private func detectSentimentWithModel(_ message: String) {
-            do {
-                let sentimentDetector = try NLModel(mlModel: AnRandomSentimentClassifier().model)
-                guard let prediction = sentimentDetector.predictedLabel(for: message) else {
-                    print("Failed to predict result")
-                    return
-                }
-                
-                print("Our status: \(prediction)")
-            } catch {
-                fatalError("Failed to load Natural Language Model: \(error)")
+        do {
+            let sentimentDetector = try NLModel(mlModel: AnRandomSentimentClassifier().model)
+            guard let prediction = sentimentDetector.predictedLabel(for: message) else {
+                print("Failed to predict result")
+                return
+            }
+            
+            print("Our status: \(prediction)")
+        } catch {
+            fatalError("Failed to load Natural Language Model: \(error)")
+        }
+    }
+    
+    
+    /*
+    func fetchAnyPossibleIndexForMove()  {
+        var choice: UIButton = UIButton ()
+        var emptySquares : [Int] = [Int]()
+        for i in 1...gameState.count {
+            if gameState[i-1] == 0 {
+                emptySquares.append(i)
             }
         }
-
-    
-    
-    //        func fetchAnyPossibleIndexForMove() -> Int {
-    //            var emptySquares : [Int] = [Int]()
-    //            for i in 1...gameState.count {
-    //                if gameState[i-1] == 0 {
-    //                    emptySquares.append(i)
-    //                }
-    //            }
-    //            if emptySquares.isEmpty {
-    //                //print("Game has reached Error state ...!!")
-    //                return -1
-    //            }
-    //            //print("found empty squares...")
-    //            //print(emptySquares)
-    //            // return any random empty space
-    //            let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
-    //            return emptySquares[Int(randomSquare)]
-    //        }
-}
+        if emptySquares.isEmpty {
+            //print("Game has reached Error state ...!!")
+            return
+        }
+        //print("found empty squares...")
+        //print(emptySquares)
+        // return any random empty space
+        let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
+        
+        
+        choice.tag = emptySquares[Int(randomSquare)]
+        
+        if(choice.tag == b1.tag){
+            choice = b1}
+        
+        if(choice.tag == b2.tag){
+            choice = b2}
+        
+        if(choice.tag == b3.tag){
+            choice = b3}
+        
+        if(choice.tag == b4.tag){
+            choice = b4}
+        
+        if(choice.tag == b5.tag){
+            choice = b5}
+        
+        if(choice.tag == b6.tag){
+            choice = b5}
+        
+        if(choice.tag == b7.tag){
+            choice = b7}
+        
+        if(choice.tag == b8.tag){
+            choice = b8}
+        
+        if(choice.tag == b9.tag){
+            choice = b9}
+        
+        
+        
+        if (gameState[choice.tag] == 0 && gameIsActive == true) {
+            gameState[choice.tag] = activePlayer
+            if (activePlayer == 1) {
+                choice.setImage(playerOneImage, for: .normal)
+                activePlayer = 2
+            } else {
+                choice.setImage(playerTwoImage, for: .normal)
+                activePlayer = 1
+            }
+        }
+        
+        for combination in winningCombinations{
+            // check possible winning combinations against current game state
+            if (gameState[combination[0]] == 1
+                && gameState[combination[0]] == gameState[combination[1]]
+                && gameState[combination[1]] == gameState[combination[2]]
+                ){
+                
+                print("entrou 1")
+                
+                //se todos os campos foram preenchidos
+                gameIsActive = false
+                
+                if gameState[combination[0]] == 1{
+                    //cross has won
+                    print("CROSS")
+                    label.text = "Chis has won!"
+                    playAgainbutton.isHidden = false
+                    label.isHidden = false
+                    sentimentAnalysisButton.isHidden = false
+                    bikeDetectionButton.isHidden = false
+                    print("entrou 2")
+                }
+                else{
+                    print("NOUGHT")
+                    //nought has won
+                    label.text = "Bola has won!"
+                    playAgainbutton.isHidden = false
+                    label.isHidden = false
+                    sentimentAnalysisButton.isHidden = false
+                    bikeDetectionButton.isHidden = false
+                    print("entrou 3")
+                    
+                }
+                print("entrou 4")
+                
+                
+            }
+            
+            print("entrou 5")
+        }
+        gameIsActive = false
+        
+        for i in gameState{
+            if i == 0
+            {
+                gameIsActive = true
+                break
+            }
+        }
+        
+        if gameIsActive == false {
+            label.text = "Its was a draw"
+            label.isHidden = false
+            playAgainbutton.isHidden = false
+        }
+    }
+*/
+ }
 
