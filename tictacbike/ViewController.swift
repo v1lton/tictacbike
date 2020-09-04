@@ -259,9 +259,9 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    /*
     func fetchAnyPossibleIndexForMove()  {
+        
+    
         var choice: UIButton = UIButton ()
         var emptySquares : [Int] = [Int]()
         for i in 1...gameState.count {
@@ -278,8 +278,15 @@ class ViewController: UIViewController {
         // return any random empty space
         let randomSquare = arc4random_uniform(UInt32(emptySquares.count - 1))
         
+        let calculoMelhorJogada = self.fetchBestPossibleIndexForMove()
+               
+        if( calculoMelhorJogada == -1){
         
-        choice.tag = emptySquares[Int(randomSquare)]
+            choice.tag = emptySquares[Int(randomSquare)]
+        }
+        else{
+           choice.tag = calculoMelhorJogada
+        }
         
         if(choice.tag == b1.tag){
             choice = b1}
@@ -377,6 +384,26 @@ class ViewController: UIViewController {
             playAgainbutton.isHidden = false
         }
     }
-*/
+
+    func fetchBestPossibleIndexForMove() -> Int {
+         /*
+             the goal is to find the best possible move to block, without making it imppssible to win
+             Hence the computer will only look for a block possibility, leaving other options for the user to score a win
+         */
+         for winningCombination in winningCombinations {
+             // check possible winning combinations against current game state
+             if gameState[winningCombination[0]] == 1 && gameState[winningCombination[0]] == gameState[winningCombination[1]] && gameState[winningCombination[2]] != 2 {
+                 return winningCombination[2]
+             }
+             else if gameState[winningCombination[1]] == 1 && gameState[winningCombination[1]] == gameState[winningCombination[2]] && gameState[winningCombination[0]] != 2  {
+                 return winningCombination[0]
+             }
+             else if gameState[winningCombination[2]] == 1 && gameState[winningCombination[2]] == gameState[winningCombination[0]] && gameState[winningCombination[1]] != 2  {
+                 return winningCombination[1]
+             }
+         }
+         return -1
+     }
+    
  }
 
