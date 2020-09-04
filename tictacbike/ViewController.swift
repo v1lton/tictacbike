@@ -173,7 +173,7 @@ class ViewController: UIViewController {
                 if gameState[combination[0]] == 1{
                     //cross has won
                     print("CROSS")
-                    label.text = "Chis has won!"
+                    label.text = "Jogador 1 ganhou!!"
                     detectSentimentWithModel(imagesAndDescriptions[0].1)
                     playAgainbutton.isHidden = false
                     label.isHidden = false
@@ -184,7 +184,7 @@ class ViewController: UIViewController {
                 else{
                     print("NOUGHT")
                     //nought has won
-                    label.text = "Bola has won!"
+                    label.text = "Jogador 1 ganhou!"
                     detectSentimentWithModel(imagesAndDescriptions[1].1)
                     playAgainbutton.isHidden = false
                     label.isHidden = false
@@ -194,8 +194,6 @@ class ViewController: UIViewController {
                     
                 }
                 print("entrou 4")
-                
-                
             }
             
             print("entrou 5")
